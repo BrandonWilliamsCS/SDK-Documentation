@@ -121,7 +121,7 @@ To run the WebRTC sample apps, just place the files in a directory that is acces
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <script src="https://code.oovoo.com/webrtc/oovoosdk-2.1.0.min.js"></script>
+    <script src="https://code.oovoo.com/webrtc/oovoosdk-2.1.1.min.js"></script>
     <script type="text/javascript">
         var avchatObj = null;
         var conferenceId = "OOVOO_WEB_RTC";
@@ -240,7 +240,7 @@ To run the WebRTC sample apps, just place the files in a directory that is acces
             overflow-y: auto;
         }
     </style>
-    <script src="https://code.oovoo.com/webrtc/oovoosdk-2.1.0.min.js"></script>
+    <script src="https://code.oovoo.com/webrtc/oovoosdk-2.1.1.min.js"></script>
     <script type="text/javascript">
         var appToken = "PUT HERE APPLICATION TOKEN";
         var sessionToken = getQSParam("t");

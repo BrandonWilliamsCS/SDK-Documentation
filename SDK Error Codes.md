@@ -9,10 +9,10 @@
 |MethodNotImplemented |4              | Method Not Implemented
 |DeviceNotFound |5                    | Device Not Found
 |AlreadyInSession |6                  | Already In Session
-|DuplicateParticipantId |7            | Duplicate Participant Id
+|DuplicateParticipantId |7            | Duplicate Participant ID
 |ConferenceIdNotValid |8              | Conference ID Not Valid
 |ClientIdNotValid |9                  | Client ID Not Valid
-|ParticipantIdNotValid |10            | ParticipantId Not Valid
+|ParticipantIdNotValid |10            | Participant ID Not Valid
 |CameraIdNotValid |11                 | Camera ID Not Valid
 |MicrophoneIdNotValid |12             | Microphone ID Not Valid
 |SpeakerIdNotValid |13                | Speaker ID Not Valid
@@ -27,7 +27,7 @@
 |InvalidToken |22                     | Invalid Token
 |ExpiredToken |23                     | Expired Token
 |PreviousOperationNotCompleted |24    | Previous Operation Not Completed
-|AppIdNotValid |25                    | AppId Not Valid
+|AppIdNotValid |25                    | App ID Not Valid
 |NoAvs |26                            | No AVS
 |ActionNotPermitted |27               | Action Not Permitted
 |DeviceNotInitialized |28             | Device Not Initialized
@@ -36,6 +36,12 @@
 |SSLCertificateVerificationFailed |31 | SSL Certificates Verification Failed
 |ParameterAlreadySet |32              | Parameter Already Set
 |AccessDenied |33                     | Access Denied
-|ConnectionLost |34                   | Connection Lost
+|NoInternetConnection |34             | No internet connection or connection lost
 |NotEnoughMemory |35                  | Not Enough Memory
-|ResolutionNotSupported |36            | Resolution not supported
+|ResolutionNotSupported |36           | Resolution not supported
+|AuthenticationFailed |37             | Authentication Failed
+|ApiVersionNotFound |38               | API Version Not Found
+|CreateGroupFailed |39                | Create Group Failed
+|InvalidContentType |40               | Invalid Content Type
+|UnsupportedContentType |41           | Unsupported Content Type
+|HttpServerError |42                  | Http server error

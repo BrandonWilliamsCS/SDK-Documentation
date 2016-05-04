@@ -1,10 +1,10 @@
-# Developing with the WebRTC SDK
+# Developing with the JS SDK
 <!-- TOC depth:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Developing with the WebRTC SDK](#developing-with-the-webrtc-sdk)
+- [Developing with the JS SDK](#developing-with-the-JS-sdk)
 	- [Introduction](#introduction)
 	- [Core Concepts](#core-concepts)
-		- [What is WebRTC?](#what-is-webrtc)
+		- [What is JS?](#what-is-JS)
 		- [What is an Application ID?](#what-is-an-application-id)
 		- [What is an Application Token?](#what-is-an-application-token)
 		- [What is a Development Application Token?](#what-is-a-development-application-token)
@@ -12,13 +12,13 @@
 		- [What is a Conference ID?](#what-is-a-conference-id)
 		- [What is a Participant?](#what-is-a-participant)
 		- [What is a Participant ID?](#what-is-a-participant-id)
-	- [Getting Started With the WebRTC SDK Package](#getting-started-with-the-webrtc-sdk-package)
-		- [What browsers are supported by the ooVoo WebRTC SDK?](#what-browsers-are-supported-by-the-oovoo-webrtc-sdk)
-		- [How do I setup the ooVoo WebRTC SDK in my development environment?](#how-do-i-setup-the-oovoo-webrtc-sdk-in-my-development-environment)
-		- [How do I deploy and run the ooVoo WebRTC sample apps (Video and Text Chat) included in the SDK download package?](#how-do-i-deploy-and-run-the-oovoo-webrtc-sample-apps-video-and-text-chat-included-in-the-sdk-download-package)
+	- [Getting Started With the JS SDK Package](#getting-started-with-the-JS-sdk-package)
+		- [What browsers are supported by the ooVoo JS SDK?](#what-browsers-are-supported-by-the-oovoo-JS-sdk)
+		- [How do I setup the ooVoo JS SDK in my development environment?](#how-do-i-setup-the-oovoo-JS-sdk-in-my-development-environment)
+		- [How do I deploy and run the ooVoo JS sample apps (Video and Text Chat) included in the SDK download package?](#how-do-i-deploy-and-run-the-oovoo-JS-sample-apps-video-and-text-chat-included-in-the-sdk-download-package)
 			- [Video Chat Sample](#video-chat-sample)
 			- [Text Chat Sample](#text-chat-sample)
-	- [Developing With the WebRTC SDK](#developing-with-the-webrtc-sdk)
+	- [Developing With the JS SDK](#developing-with-the-JS-sdk)
 		- [How can I get Application ID and Application Token?](#how-can-i-get-application-id-and-application-token)
 		- [How do I connect my users in a video call?](#how-do-i-connect-my-users-in-a-video-call)
 		- [How do I Initialize the SDK/Client Side Login?](#how-do-i-initialize-the-sdkclient-side-login)
@@ -49,17 +49,17 @@
 <!-- /TOC -->
 
 ## Introduction
-Thank you for your interest in the ooVoo Video Chat SDK. The ooVoo SDK encapsulates the technical complexity of implementing and delivering a high quality, one-to-one and group video communications service over the Internet under a set of easy to use APIs exposed via the SDK, making it easy for you to quickly integrate video experiences into your own apps.
+Thank you for your interest in the ooVoo JS SDK. The ooVoo SDK encapsulates the technical complexity of implementing and delivering a high quality, one-to-one and group video communications service over the Internet under a set of easy to use APIs exposed via the SDK, making it easy for you to quickly integrate video experiences into your own apps.
 
 The video service offered via the SDK is powered by ooVoo's proven and scalable global cloud infrastructure and already provides over 1 billion video minutes to millions of users per month.
 
-Below you will find complete documentation for the WebRTC JS SDK that will have you up and running in no time. Documentation will be added for additional platforms as well, as soon as they are released.
+ooVoo JS SDK based on WebRTC technology. and allows audio, video and data transmitions between web apps and other platfoms.
+
+Below you will find complete documentation for the ooVoo JS SDK that will have you up and running in no time.
 
 Happy Hacking!
 
 ## Core Concepts
-### What is WebRTC?
-WebRTC is a standard for enabling Real Time Communications including audio, video and data transmission between two web browsers without the need for additional plugins.
 
 ### What is an Application ID?
 An Application ID is an ID issued by ooVoo to a developer that is used to uniquely identify the developer. You should keep your Application ID secure.
@@ -92,15 +92,15 @@ A Participant in an ooVoo Video Conference is a user who has successfully connec
 ### What is a Participant ID?
 A Participant ID is a unique identifier assigned by the ooVoo video service for each participant in an ooVoo video conference, upon a user's successful connection to the conference session.
 
-## Getting Started With the WebRTC SDK Package
-### What browsers are supported by the ooVoo WebRTC SDK?
-Currently the WebRTC Standard is supported by the following browsers:
+## Getting Started With the JS SDK Package
+### What browsers are supported by the ooVoo JS SDK?
+Currently the JS Standard is supported by the following browsers:
 - Chrome 35 and derivatives (Canary, Chromium, etc.)
 - Firefox 30
 - Opera 22
-- Safari and Internet Explorer are not supported yet. We recommend upgrading your browser to the latest version to properly support our WebRTC SDK.
+- Safari and Internet Explorer are not supported yet. We recommend upgrading your browser to the latest version to properly support our JS SDK.
 
-### How do I setup the ooVoo WebRTC SDK in my development environment?
+### How do I setup the ooVoo JS SDK in my development environment?
 In order to get up and running just open the demo.html file in any text editor or development environment. It is a barebones starting point which you can build around and in it you will find the necessary javascript libraries already included. If you'd like not to use the demo.html file then make sure you include the following lines in your own app:
 
 ```javascript
@@ -109,8 +109,8 @@ In order to get up and running just open the demo.html file in any text editor o
 
 and make sure to define the necessary variables as is referenced in the demo.html file.
 
-### How do I deploy and run the ooVoo WebRTC sample apps (Video and Text Chat) included in the SDK download package?
-To run the WebRTC sample apps, just place the files in a directory that is accessible from the document root of your web server. Make sure you edit the .html files or your own code to include your AppID , APP Token & conference ID (roomID), the following parameters are optional, (get default value): frame per second, resolution level and your name. Please follow the examples below.
+### How do I deploy and run the ooVoo JS sample apps (Video and Text Chat) included in the SDK download package?
+To run the JS sample apps, just place the files in a directory that is accessible from the document root of your web server. Make sure you edit the .html files or your own code to include your AppID , APP Token & conference ID (roomID), the following parameters are optional, (get default value): frame per second, resolution level and your name. Please follow the examples below.
 
 #### Video Chat Sample
 
@@ -357,7 +357,7 @@ To run the WebRTC sample apps, just place the files in a directory that is acces
 ````
 Then browse to the page using either Chrome, Firefox Or Opera. [http://{your-website}/demo.html](http://{your-website}/demo.html)
 
-## Developing With the WebRTC SDK
+## Developing With the JS SDK
 Check out our developer portal and dashboard at [http://developer.oovoo.com](http://developer.oovoo.com). There you can generate AppIDs, tokens and track usage statistics.
 
 ### How can I get Application ID and Application Token?
@@ -365,7 +365,7 @@ Application ID and Application Token are unique identifiers assigned by ooVoo fo
 
 Application ID and Application Token are the only way ooVoo uses to identify you as a unique and legitimate ooVoo SDK developer. You must exercise caution to keep them secure. If you ever forget/lose your ID and/or Token, please contact ooVoo by emailing to [sdk.support@oovoo.com](mailto:sdk.support@oovoo.com) or contact your designated ooVoo developer advocate immediately.
 
-You will need two types of tokens for WebRTC applications. You will define a domain for your Application ID in the dashboard and then create two tokens. One token type is a Web token, this is used for web clients. The other token type is Native. This token type is for mobile devices which will be connecting to the same session.
+You will need two types of tokens for JS applications. You will define a domain for your Application ID in the dashboard and then create two tokens. One token type is a Web token, this is used for web clients. The other token type is Native. This token type is for mobile devices which will be connecting to the same session.
 
 >Please note that Web token types will not work on iOS and Android mobile devices. You must create a Native token for those devices.
 
@@ -377,7 +377,7 @@ In ooVoo a video call is technically named as "conference". Each conference is i
 
 When trying to create or join a conference, you must first login in from either the server or client side to authenticate.
 
-Afterwards, the starting point for your app will be to call the initialization function `ooVooClient.authorization` as described below. This method is used to initialize and setup the SDK. You won't need to re-use this method, but you may want to customize the parameters used. All other SDK related function calls must be called after this one, since they won't exist until you do.
+Afterwards, the starting point for your app will be to call the initialization function `ooVoo.API.init` as described below. This method is used to initialize and setup the SDK. You won't need to re-use this method, but you may want to customize the parameters used. All other SDK related function calls must be called after this one, since they won't exist until you do.
 
 ### Client Side Login
 `ooVooClient.authorization(params)`
@@ -452,9 +452,9 @@ Name           | Type         | Description                                     
 params         | object       | A collection of initialization parameters that control the setup of the Conference.                                                                       | Can be null
 -audio         | boolean      | Enable local audio stream on the conference For audio only session set false.                                   | true
 -video         | boolean      | Enable local video stream on the conference                                                                                                               | true
-videoResolution | enum | Sets the video resolution of the conference, any resolution up to the following resolutions are supported depending on device.<br/>Enum values:<br/><ul><li>ooVooClient.VideoResolution.NORMAL(352 x 288)</li><li>ooVooClient.VideoResolution.HIGH(640 x 480)</li><li>ooVooClient.VideoResolution.HD(1280 x 720)</li></ul> | required
+videoResolution | enum | Sets the video resolution of the conference, any resolution up to the following resolutions are supported depending on device.<br/>Enum values:<br/><ul><li>ooVoo.API.VideoResolution.NORMAL(352 x 288)</li><li>ooVoo.API.VideoResolution.HIGH(640 x 480)</li><li>ooVoo.API.VideoResolution.HD(1280 x 720)</li></ul> | required
 videoFrameRate | Int[] | Sets the minimum an maximum video frame rate of the conference. Value can be number between 5 and 30. | required
-onInitComplete | InitDelegate | A function that will be called once ooVooClient is initialized; any code that should synchronize with the Conference session should be in onInitComplete(). | none, required
+onInitComplete | InitDelegate | A function that will be called once ooVoo.API is initialized; any code that should synchronize with the Conference session should be in onInitComplete(). | none, required
 
 Example:
 
@@ -719,7 +719,7 @@ Parameters:
 Name          | Type   | Description
 ------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 evt           | object | Contains information about the event
-evt.type     | Enum   | <ul><li>ooVooClient.ConferenceStateType.ACCESS_ACCEPTED<br/>(Indicates user has agreed to open his camera and microphone)</li><li>ooVooClient.ConferenceStateType.JOINED<br/>(Joined to conference)</li><li>ooVooClient.ConferenceStateType.ACCESS_DENIED<br/>(Indicates user has denied to open his camera and microphone.)</li><li>ooVooClient.ConferenceStateType.CONNECTED<br/>(Connected to conference server.)</li><li>ooVooClient.ConferenceStateType.DISCONNECTED<br/>(Disconnected form conference on connection)</li><li>ooVooClient.ConferenceStateType.RECONNECTING<br/>(Reconnecting to conference server.)</li><li>ooVooClient.ConferenceStateType.RECONNECTED<br/>(Reconnected to conference server.)</li><li>ooVooClient.ConferenceStateType.DEVICE_NOT_FOUND<br/>(Indicates that a selected cam/mic device has not been found)</li><li>ooVooClient.ConferenceStateType.CAM_RES_NOT_SUPPORTED<br/>(Selected camera resolution is not supported by the hardware)</li></ul>
+evt.type     | Enum   | <ul><li>ooVoo.API.ConferenceStateEventType.ACCESS_ACCEPTED<br/>(Indicates user has agreed to open his camera and microphone)</li><li>ooVoo.API.ConferenceStateEventType.JOINED<br/>(Joined to conference)</li><li>ooVoo.API.ConferenceStateEventType.ACCESS_DENIED<br/>(Indicates user has denied to open his camera and microphone.)</li><li>ooVoo.API.ConferenceStateEventType.CONNECTED<br/>(Connected to conference server.)</li><li>ooVoo.API.ConferenceStateEventType.DISCONNECTED<br/>(Disconnected form conference on connection)</li><li>ooVoo.API.ConferenceStateEventType.RECONNECTING<br/>(Reconnecting to conference server.)</li><li>ooVoo.API.ConferenceStateEventType.RECONNECTED<br/>(Reconnected to conference server.)</li><li>ooVoo.API.ConferenceStateEventType.DEVICE_NOT_FOUND<br/>(Indicates that a selected cam/mic device has not been found)</li><li>ooVoo.API.ConferenceStateEventType.CAM_RES_NOT_SUPPORTED<br/>(Selected camera resolution is not supported by the hardware)</li></ul>
 evt.errorCode | string | Disconnect reason
 
 ### onParticipantJoined ( evt )

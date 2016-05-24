@@ -3,7 +3,7 @@
 
 - [Developing with the JS SDK](#developing-with-the-JS-sdk)
 	- [Introduction](#introduction)
-	- [Core Concepts](#core-concepts)
+	- [Core Concepts](#core-concepts)se
 		- [What is JS?](#what-is-JS)
 		- [What is an Application ID?](#what-is-an-application-id)
 		- [What is an Application Token?](#what-is-an-application-token)
@@ -602,15 +602,15 @@ Triggered Events:
 ### How can I send messages while in a conference?
 You can send messages while in a conference by calling the `avchatObj.sendData()` function.
 
-`avchatObj.sendData(uid,to_uid,data);`
+`avchatObj.sendData(to_uid,data,callback);`
 
 Parameters:
 
 Name | Type   | Description                       | Default
 ---- | ------ | --------------------------------- | --------
-uid|String|Application unique sender id|required
 to_uid|String|Application unique participant id or  "" (empty string) value to send for all participants|required
 data|String|Data to Send|required
+callback|||
 
 Triggered Events:
 - onReceiveData

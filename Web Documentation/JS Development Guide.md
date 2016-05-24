@@ -747,13 +747,11 @@ evt.uid | string | Application unique participant id
 ### onRemoteVideoStateChanged ( evt )
 Indicates the remote video stream states
 
-Parameters:
-
 Name       | Type   | Description
 ---------- | ------ | --------------------------------------------------------------------------------------
 evt        | object | Contains information about the event
 evt.uid    | string | Application unique participant id
-evt.state  | string | One of the following values:<br/><ul><li>PLAY</li><li>PAUSED</li><li>STOPPED</li></ul>
+evt.state  | string | One of the following values:<br/><ul><li>	ooVooClient.VideoStateType.PLAY</li><li>ooVooClient.VideoStateType.PAUSED</li><li>ooVooClient.VideoStateType.STOPPED</li></ul>
 evt.stream | stream | Video stream object
 
 ### onVideoRotate( evt )

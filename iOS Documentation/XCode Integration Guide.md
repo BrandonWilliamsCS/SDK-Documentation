@@ -54,6 +54,7 @@ Choose ooVoo SDK framework file and click open:
  - MobileCoreServices.framework
  - QuickLook.framework
  - AssetsLibrary.framework
+ - CoreTelephony.framework
  - libz.1.1.3.dylib
 ```
 

@@ -83,6 +83,7 @@ Do not forget to import additional frameworks used by ooVooSDK and provided by X
  - MobileCoreServices.framework
  - QuickLook.framework
  - AssetsLibrary.framework
+ - CoreTelephony.framework
  - libz.1.1.3.dylib
 ```
 

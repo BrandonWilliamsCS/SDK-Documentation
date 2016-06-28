@@ -3,8 +3,7 @@
 
 - [Developing with the JS SDK](#developing-with-the-JS-sdk)
 	- [Introduction](#introduction)
-	- [Core Concepts](#core-concepts)se
-		- [What is JS?](#what-is-JS)
+	- [Core Concepts](#core-concepts)
 		- [What is an Application ID?](#what-is-an-application-id)
 		- [What is an Application Token?](#what-is-an-application-token)
 		- [What is a Development Application Token?](#what-is-a-development-application-token)
@@ -46,7 +45,7 @@
 		- [onReciveAcknowledgement ( evt )](#onreciveacknowledgement-evt-)
 	- [Error Codes](#error-codes)
 	- [Server-to-Server Login](#server-to-server-login)
-<!-- /TOC -->
+
 
 ## Introduction
 Thank you for your interest in the ooVoo JS SDK. The ooVoo SDK encapsulates the technical complexity of implementing and delivering a high quality, one-to-one and group video communications service over the Internet under a set of easy to use APIs exposed via the SDK, making it easy for you to quickly integrate video experiences into your own apps.
@@ -747,6 +746,8 @@ evt.uid | string | Application unique participant id
 ### onRemoteVideoStateChanged ( evt )
 Indicates the remote video stream states
 
+Parameters:
+
 Name       | Type   | Description
 ---------- | ------ | --------------------------------------------------------------------------------------
 evt        | object | Contains information about the event
@@ -840,18 +841,51 @@ Parameters:
 Name    | Type                 | Description                                                                                                                                                                                                                                                                                                                     | Default
 ------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------
 origin  | string               | The domain developer has been configured on ooVoo SDK  developer site for his app ID                                                                                                                                                                                                                                            | empty
-postUrl | string               | ooVoo backend URL<br/>sandbox:<br/>  [https://connect.oovoo.com/1.0/sso/app/login/s2s](https://connect.oovoo.com/1.0/sso/app/login/s2s)<br/>production:<br/> [https://connect.oovoo.com/1.0/sso/app/login/s2s](https://connect.oovoo.com/1.0/sso/app/login/s2s)<br/>:params:<br/>-at:={Your App token}&ct=1&cst=2&sv=1.8&cv=0.2 | required
-content | string : format json | "{ \"payload\": { \"user_id\":'YourUserID-unique'} }"<br/>Params: user_id Application unique participant id                                                                                                                                                                                                                     | required
+postUrl | string               | ooVoo backend URL<br/>sandbox:<br/>  [https://connect.sandbox.oovoo.com/1.0/sso/app/login/s2s](https://connect.sandbox.oovoo.com/1.0/sso/app/login/s2s)<br/>production:<br/> [https://connect.oovoo.com/1.0/sso/app/login/s2s](https://connect.oovoo.com/1.0/sso/app/login/s2s)<br/>:params:<br/>?at:=[Your App token-(WEB type)]&ct=Web&cst=Web&sv=2.3.0.113&cv=1.0.0 | required
+content | string : format json | { "payload":<br/> {<br/> "user_id": "YourUserID-unique"<br/>}<br/> }<br/>Params: user_id Application unique participant id                                                                                                                                                                                                                     | required
+
+For Parameters in postUrl:
+
+Name	| Type		| Requirements	| Description		| Values
+------- | ---------	| ------------- | ----------------- | -----------------------------------------------
+ct		| string	| Required		| Client Type		| Web
+cst		| string	| Required		| Client Sub Type	| Web
+sv		| numerical	| Required		| SDK version		| Format X.X.X.XXX for example 2.3.0.113
+cv		| string	| Required		| client version	| No restrictions, for example 1.0.0
+
+Note: 
+- cv(client version) value is case sensitive. 
+
+
+Response:<br/>
+Responses are strings in json format. If authorize succeeds, developer will get session token. Following is an example:
+```
+{
+  "meta" : { META-DATA HERE },
+  "payload":{  
+			"token":"<SESSION-TOKEN>",
+			"instance_id":"<INSTANCE-ID>"
+            }
+}
+```
+
+Attribute	| Type		| Requirements	| Description
+----------- | --------- | ------------- | ------------------------------
+token		| String	| Required		| Session token
+instance_id	| String	| Required		| Instance Id
+
+
+
 
 ASP.Net Sample Code
 
-```asp
+```c#
 private string GetUserToken()
         {
         using(WebClient client = new WebClient())
         {  
           string origin = "YOUR APP DOMAIN"
-          string postUrl ="https://connect.dev.oovoo.com/1.0/sso/app/login/s2s?at={Your App Token-(WEB type)} &ct=1&cst=2&sv=1.8&cv=0.2";
+          string postUrl ="https://connect.dev.oovoo.com/1.0/sso/app/login/s2s?at={Your App Token-(WEB type)} &ct=Web&cst=Web&sv=2.3.0.113&cv=1.0.0";
 
            string content = "{ \"payload\": { \"user_id\":'foofoo'} }";
            //request

@@ -54,6 +54,7 @@ Choose ooVoo SDK framework file and click open:
  - MobileCoreServices.framework
  - QuickLook.framework
  - AssetsLibrary.framework
+ - CoreTelephony.framework
  - libz.1.1.3.dylib
 ```
 
@@ -163,7 +164,7 @@ Open `ViewController.h` file and add property `ooVooClient`:
     // 3. Create a video panel and open camera
     -(void)createPanel{
 
-        VideoPanel *panel = [[VideoPanel alloc]initWithFrame:self.view.frame];
+        ooVooVideoPanel *panel = [[ooVooVideoPanel alloc]initWithFrame:self.view.frame];
          [self.view addSubview:panel];
         [self.sdk.AVChat.VideoController bindVideoRender:nil/*[ActiveUserManager activeUser].userId*/ render:panel];
         [self.sdk.AVChat.VideoController openCamera];

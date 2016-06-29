@@ -12,7 +12,7 @@
 - [How do I create/join a conference?](#how-do-i-createjoin-a-conference)
 - [How can I init audio ?](#how-can-i-init-audio-)
 - [How can I configure the audio mode (i.e. Enable audio only calls)?](#how-can-i-configure-the-audio-mode-ie-enable-audio-only-calls)
-- [How do I use the VideoPanel object?](#how-do-i-use-the-videopanel-object)
+- [How do I use the ooVooVideoPanel object?](#how-do-i-use-the-oovoovideopanel-object)
 - [How do I display my local preview video in my app?](#how-do-i-display-my-local-preview-video-in-my-app)
 - [How do I start/stop sending my audio and video streams to a conference?](#how-do-i-startstop-sending-my-audio-and-video-streams-to-a-conference)
 - [How do I start/stop receiving the video streams of remote participants in a conference?](#how-do-i-startstop-receiving-the-video-streams-of-remote-participants-in-a-conference)
@@ -83,6 +83,7 @@ Do not forget to import additional frameworks used by ooVooSDK and provided by X
  - MobileCoreServices.framework
  - QuickLook.framework
  - AssetsLibrary.framework
+ - CoreTelephony.framework
  - libz.1.1.3.dylib
 ```
 
@@ -92,7 +93,7 @@ Do not forget to import additional frameworks used by ooVooSDK and provided by X
 Just add following line to your Podfile:
 
 ```objective-c
-    pod ‘ooVooSDK2’, ~>‘2.0’
+    pod 'ooVooSDK2' , '~>2.0'
 ```
 
 ## How do I build and run the ooVoo sample app included in the SDK download package?
@@ -220,8 +221,8 @@ If audio was inited successful the means that audio capture and playback activat
    [sdk.AVChat.AudioController setConfig:OOVOOAudioModeVoiceChat forKey:ooVooAudioControllerConfigKeyAudioSetMode];
 ```
 
-## How do I use the VideoPanel object?
-  The `VideoPanel` object is our implementation for rendering a video stream for a participant, it is subclass of `UIView`.   You can construct your own look and feel for by inheritance or aggregation of the object.
+## How do I use the ooVooVideoPanel object?
+  The `ooVooVideoPanel` object is our implementation for rendering a video stream for a participant, it is subclass of `UIView`.   You can construct your own look and feel for by inheritance or aggregation of the object.
 
 ## How do I display my local preview video in my app?
 There are separate API calls to turn the camera on/off, for preview control and video transmission. See below. In order to display preview you must turn on camera first.

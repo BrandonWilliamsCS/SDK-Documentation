@@ -1,4 +1,4 @@
-# ooVoo Video Platform Documentation for SDK v2.3
+# ooVoo Video Chat Documentation for SDK v2.3
 The following is the documentation repository for the ooVoo Video Platform for SDK v2.3.
 
 Documentation for SDK 2.2 can be found in branch 2.2.

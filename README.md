@@ -34,4 +34,4 @@ Documentation is released under an Apache 2.0 License.
 ```
 
 ## Support
-If you need help with the ooVoo Video Platform SDK you can find us on [#ooVoo on freenode](http://webchat.freenode.net/?channels=%23oovoo&uio=OT10cnVlde), [@oovoodev on twitter](http://twitter.com/oovoodev) and email [sdk.support@oovoo.com](mailto:sdk.support@oovoo.com).
+If you need help with the ooVoo Video Chat SDK you can contact us: [@krushtech on twitter](http://twitter.com/krushtech) and email [sdk@krush.com](mailto:sdk@krush.com).
